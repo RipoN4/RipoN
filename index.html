@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RipoN — IN IMAGINATION</title>
+  <meta name="description"
+    content="Blogger, YouTuber, and Web Developer from Kolkata, India. Since 2013 I have been enjoying the roller-coaster ride of building websites and providing valuable information to the world.">
+  <meta name="theme-color" content="#040714">
+  <meta name="author" content="RipoN Sahaji">
+  <link rel="canonical" href="https://ripon.in/">
+
+  <!-- Social Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ripon.in/">
+  <meta property="og:title" content="RipoN — IN IMAGINATION">
+  <meta property="og:description"
+    content="Blogger, YouTuber, and Full-Stack Developer from West Bengal, India. 10,000+ websites built solo. IN IMAGINATION.">
+  <meta property="og:image" content="https://ripon.in/img/og.jpg">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="720">
+  <meta property="og:image:type" content="image/jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@TechRipoN">
+  <meta name="twitter:creator" content="@TechRipoN">
+  <meta name="twitter:title" content="RipoN — IN IMAGINATION">
+  <meta name="twitter:description"
+    content="Blogger, Full-Stack Developer & YouTuber. 10,000+ websites built solo. IN IMAGINATION.">
+  <meta name="twitter:image" content="https://ripon.in/img/og.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/outfit-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ibmplexmono-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://ripon.in/#person",
+        "name": "RipoN Sahaji",
+        "alternateName": "Technical RipoN",
+        "url": "https://ripon.in/",
+        "image": "https://ripon.in/img/RipoN.jpg",
+        "description": "Blogger, Full-Stack Developer, and YouTube Creator from West Bengal, India. Pioneer of Micro-Niche and Event Blogging with 10,000+ websites built.",
+        "sameAs": [
+          "https://www.youtube.com/@TechnicalRipoN",
+          "https://www.youtube.com/@BlogMafia",
+          "https://www.youtube.com/@SEOMafia",
+          "https://github.com/RipoN4",
+          "https://x.com/TechRipoN",
+          "https://www.instagram.com/techripon/",
+          "https://www.facebook.com/RPNClub",
+          "https://www.linkedin.com/in/theripon/"
+        ],
+        "jobTitle": "Full-Stack Developer & Tech Creator",
+        "knowsAbout": ["Web Development", "Blogging", "Search Engine Optimization", "Artificial Intelligence", "Three.js", "Python"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ripon.in/#website",
+        "url": "https://ripon.in/",
+        "name": "RipoN — IN IMAGINATION",
+        "publisher": { "@id": "https://ripon.in/#person" },
+        "inLanguage": "en-US"
+      }
+    ]
+  }
+  </script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./js/vendor/three.module.min.js"
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- SVG Global Icon Symbols -->
+  <svg width="0" height="0" style="position:absolute; display:none;" aria-hidden="true">
+    <defs>
+      <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+      </symbol>
+      <symbol id="icon-cube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="m21 16-9 5-9-5V8l9-5 9 5v8z" />
+        <path d="m3.27 6.96 8.73 4.91 8.73-4.91" />
+        <path d="M12 22V12" />
+      </symbol>
+      <symbol id="icon-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="4" width="16" height="16" rx="2" />
+        <rect x="9" y="9" width="6" height="6" />
+        <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" />
+      </symbol>
+      <symbol id="icon-yt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="5" width="20" height="14" rx="4" />
+        <polygon points="10 9 15 12 10 15 10 9" fill="currentColor" />
+      </symbol>
+      <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7" />
+      </symbol>
+      <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </symbol>
+      <symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+        <path d="M9 12H4s.55-3.03 2-4.5c1.62-1.63 5-2 5-2" />
+        <path d="M12 9v5s3.03-.55 4.5-2c1.63-1.62 2-5 2-5" />
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path
+          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </symbol>
+      <symbol id="icon-twitter" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+        <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+      </symbol>
+      <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+      </symbol>
+      <symbol id="icon-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </symbol>
+      <symbol id="icon-quora" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12c0 5.03 3.73 9.19 8.58 9.87l.42 2.51c.07.42.54.65.9.41l3.35-2.23C20.08 21.03 22 16.8 22 12c0-5.52-4.48-10-10-10zm0 17.5c-4.14 0-7.5-3.36-7.5-7.5S7.86 4.5 12 4.5s7.5 3.36 7.5 7.5c0 2.15-.9 4.1-2.36 5.48l-1.52.92-.12 1.62c-.93-.24-1.78-.71-2.5-1.32-.33.2-.68.3-1 .3z" />
+      </symbol>
+      <symbol id="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24" />
+        <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68" />
+        <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61" />
+        <line x1="2" y1="2" x2="22" y2="22" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- 3D Open Space Galaxy Vortex Canvas (Strictly Non-Interactable Space Dots) -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <!-- Ambient Deep Space Atmospheric Vignette -->
+  <div class="ambient-vignette" aria-hidden="true"></div>
+
+  <!-- Dynamic Scroll Progress Line -->
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- Magnetic Cursor (Desktop) -->
+  <div id="cursorDot" aria-hidden="true"></div>
+  <div id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Matte Loading Screen -->
+  <div class="loader-curtain" id="loader">
+    <div class="loader-logo-ring" aria-hidden="true">
+      <span class="loader-r">R</span>
+    </div>
+    <p class="loader-text">ENTERING COSMIC ORBIT</p>
+    <div class="loader-progress-track">
+      <div class="loader-progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Warp Curtain Transition FX -->
+  <div class="fullscreen-warp-curtain" id="warpCurtain" aria-hidden="true"></div>
+
+  <!-- Cinematic 1-Second Heading Reveal Overlay (Desktop) -->
+  <div class="sector-heading-reveal" id="sectorHeadingReveal" aria-hidden="true">
+    <div class="reveal-content">
+      <span class="reveal-tag" id="revealTag">SECTOR 01</span>
+      <h2 class="reveal-title" id="revealTitle">HOME</h2>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       HEADER: ONLY 'RipoN' LOGO + QUICK NAVIGATION MENU
+       ==================================================================== -->
+  <header class="nav" id="nav">
+    <a class="brand-logo-only" href="#top" data-target-sector="0" data-magnetic aria-label="RipoN Home">
+      <span class="logo-text">RipoN</span>
+    </a>
+
+    <nav aria-label="Quick navigation">
+      <ul class="nav-links">
+        <li><a href="#top" data-target-sector="0" class="active" data-magnetic>Home</a></li>
+        <li><a href="#blogging" data-target-sector="1" data-magnetic>Blogging</a></li>
+        <li><a href="#youtube" data-target-sector="2" data-magnetic>YouTube</a></li>
+        <li><a href="#coding" data-target-sector="3" data-magnetic>Coding &amp; AI</a></li>
+        <li><a href="#timeline" data-target-sector="4" data-magnetic>Personal Life</a></li>
+        <li><a href="#socials" data-target-sector="5" data-magnetic>Social Media</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle-btn" id="navToggle" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-panel" id="mobileNav" hidden>
+    <a href="#top" data-target-sector="0">Home</a>
+    <a href="#blogging" data-target-sector="1">Blogging</a>
+    <a href="#youtube" data-target-sector="2">YouTube</a>
+    <a href="#coding" data-target-sector="3">Coding &amp; AI</a>
+    <a href="#timeline" data-target-sector="4">Personal Life</a>
+    <a href="#socials" data-target-sector="5">Social Media</a>
+    <a href="#landing" data-target-sector="6">Landed</a>
+  </div>
+
+
+  <!-- ====================================================================
+       MASTER FULL-SCREEN VIEWPORT DECK
+       Vertical Full-Screen Smooth Transitions Across All Devices
+       ==================================================================== -->
+  <main class="site-viewport" id="main">
+    <div class="fullscreen-deck" id="fullscreenDeck">
+
+      <!-- ================================================================
+           SECTOR 01: HERO SECTION (Native Color Cyan #00f2fe)
+           ================================================================ -->
+      <section class="sector-slide theme-cyan is-active" id="top" data-sector="0" data-color-primary="#00f2fe"
+        data-color-secondary="#2563eb">
+        <div class="sector-inner hero-grid">
+          <div class="hero-content">
+            <div class="status-pill">
+              <span class="pulse-beacon"></span>
+              <span>Underground Blogger &amp; Developer</span>
+            </div>
+
+            <h1 class="hero-headline">
+              RipoN<br>
+              <span class="glow-text">IN IMAGINATION</span>
+            </h1>
+
+            <p class="hero-description">
+              Blogger, YouTuber, and full-stack developer from West Bengal, India. Since 2014, I've built 10,000+
+              websites solo, grown YT channels to 250,000+ subscribers, and mastered modern web architectures. 100%
+              self-taught, zero outside agencies.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#blogging" class="btn-primary" data-target-sector="1" data-magnetic role="button">
+                <span>Explore Journey</span>
+                <svg width="16" height="16" aria-hidden="true">
+                  <use href="#icon-arrow-right"></use>
+                </svg>
+              </a>
+              <a href="#socials" class="btn-secondary" data-target-sector="5" data-magnetic role="button">
+                <span>Connect on Socials</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3D Holographic / Space Radar Infographic HUD -->
+          <div class="hero-infographic-visual">
+            <div class="hologram-hud-container">
+              <svg class="hud-radar-svg" viewBox="0 0 400 400" fill="none" aria-hidden="true">
+                <circle cx="200" cy="200" r="185" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.2"
+                  stroke-dasharray="6 8" />
+                <circle cx="200" cy="200" r="150" stroke="rgba(37, 99, 235, 0.35)" stroke-width="1.5" />
+                <circle cx="200" cy="200" r="115" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1"
+                  stroke-dasharray="16 12" />
+                <circle cx="200" cy="200" r="75" stroke="rgba(0, 242, 254, 0.6)" stroke-width="1.8" />
+                <line x1="200" y1="200" x2="385" y2="200" stroke="url(#sweepGrad)" stroke-width="2"
+                  class="radar-sweep-arm" />
+                <defs>
+                  <linearGradient id="sweepGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="rgba(0, 242, 254, 0)" />
+                    <stop offset="100%" stop-color="rgba(0, 242, 254, 0.9)" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="hud-center-node">
+                <picture>
+                  <source srcset="img/RipoN.webp" type="image/webp">
+                  <img class="hdp" src="img/RipoN.jpg" alt="RipoN Sahaji - Full-Stack Developer &amp; Creator"
+                    width="110" height="110" fetchpriority="high" decoding="async">
+                </picture>
+              </div>
+              <div class="hud-satellite-badge badge-top-left">
+                <span class="sat-num">250k+</span>
+                <span class="sat-desc">YT Subscribers</span>
+              </div>
+              <div class="hud-satellite-badge badge-top-right">
+                <span class="sat-num">100%</span>
+                <span class="sat-desc">Solo Builder</span>
+              </div>
+              <div class="hud-satellite-badge badge-bottom-left">
+                <span class="sat-num">$70k-$90k</span>
+                <span class="sat-desc">Peak Mo. Income</span>
+              </div>
+              <div class="hud-satellite-badge badge-bottom-right">
+                <span class="sat-num">500+</span>
+                <span class="sat-desc">Active Domains</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTOR 02: BLOGGING SECTION (Primary Color Orange #ff5722)
+           ================================================================ -->
+      <section class="sector-slide theme-orange" id="blogging" data-sector="1" data-color-primary="#ff5722"
+        data-color-secondary="#ff9800">
+        <div class="sector-inner blogging-layout">
+          <div class="section-header-block">
+            <div class="section-tag">
+              <span class="pulse-dot"></span>
+              <span>THE BLOGGING ODYSSEY · 2014–PRESENT</span>
+            </div>
+            <h2 class="section-title">Blogging</h2>
+            <p class="section-subtitle">
+              From a tiny 2G keypad phone on Wapka to peak solo earnings of $70,000–$90,000 per month. How curiosity and
+              SEO innovation built an online empire.
+            </p>
+          </div>
+
+          <!-- 4 Key Stat Badges -->
+          <div class="stats-highlight-grid">
+            <div class="stat-highlight-card">
+              <div class="stat-number">10,000+</div>
+              <div class="stat-title">Websites Built</div>
+              <div class="stat-sub">From HTML Wapka to programmatic portals.</div>
+            </div>
+            <div class="stat-highlight-card">
+              <div class="stat-number">$70k–$90k</div>
+              <div class="stat-title">Peak Monthly Solo</div>
+              <div class="stat-sub">Record earnings through AdSense &amp; ad networks.</div>
+            </div>
+            <div class="stat-highlight-card">
+              <div class="stat-number">500+</div>
+              <div class="stat-title">Ranking Sites</div>
+              <div class="stat-sub">Simultaneously active ranking domains on Google.</div>
+            </div>
+            <div class="stat-highlight-card">
+              <div class="stat-number">100% Solo</div>
+              <div class="stat-title">Zero Outside Agencies</div>
+              <div class="stat-sub">Built, designed, coded, and monetized alone.</div>
+            </div>
+          </div>
+
+          <!-- 4 Innovation Methods Row -->
+          <div class="methods-row-grid">
+            <div class="method-card">
+              <h3>Live-Blogging</h3>
+              <p>Invented in 2016 before anyone used the strategy. Real-time updates outranking giant media outlets.</p>
+              <span class="method-pill">INVENTED 2016</span>
+            </div>
+            <div class="method-card">
+              <h3>Event Blogging</h3>
+              <p>Invented in 2017: lightweight festive greeting scripts driving millions of views in 48 hours without
+                writing long articles.</p>
+              <span class="method-pill">MILLIONS REACH</span>
+            </div>
+            <div class="method-card">
+              <h3>Micro-Niche</h3>
+              <p>Targeting a single specific keyword with a dedicated 1-page solution ranking #1 effortlessly.</p>
+              <span class="method-pill">TOP #1 GOOGLE</span>
+            </div>
+            <div class="method-card">
+              <h3>Tools &amp; APIs</h3>
+              <p>Automated calculators, scrapers, and web utilities running 24/7 generating steady passive ad revenue.
+              </p>
+              <span class="method-pill">AUTONOMOUS</span>
+            </div>
+          </div>
+
+          <!-- SEOMafia Story Banner Strip -->
+          <div class="seomafia-strip">
+            <div class="seomafia-strip-text">
+              <strong>The SEOMafia Course Movement</strong>
+              <span>Targeted 100 students; 3,000+ enrolled due to honesty. Mentored 120+ into steady online income
+                before closing the course permanently.</span>
+            </div>
+            <span class="seomafia-badge">120+ Earners · Mission Accomplished</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTOR 03: YOUTUBE SECTION (Primary Color RED #ff1100)
+           ================================================================ -->
+      <section class="sector-slide theme-red" id="youtube" data-sector="2" data-color-primary="#ff1100"
+        data-color-secondary="#ff5722">
+        <div class="sector-inner">
+          <div class="section-header-block">
+            <div class="section-tag">
+              <span class="pulse-dot"></span>
+              <span>CREATOR CHANNELS &amp; BROADCAST</span>
+            </div>
+            <h2 class="section-title">Technical RipoN &amp; Beyond</h2>
+            <p class="section-subtitle">
+              YouTube and content creation is my passion, sometimes for experimentation and fun. I have built 50+
+              YouTube
+              channels since 2015 across various topics. Among them, a few public channels featuring my face are well
+              known:
+            </p>
+          </div>
+
+          <!-- YouTube Channels 3x2 Grid -->
+          <div class="yt-channels-grid">
+            <a class="yt-card" href="https://www.youtube.com/@TechnicalRipoN" target="_blank" rel="noopener noreferrer">
+              <div>
+                <div class="yt-card-header">
+                  <div class="yt-icon-box"><svg width="22" height="22" aria-hidden="true">
+                      <use href="#icon-yt"></use>
+                    </svg></div>
+                  <span class="yt-subs-tag">250,000+ SUBS</span>
+                </div>
+                <h3 class="yt-card-title">@TechnicalRipoN</h3>
+                <p class="yt-card-desc">Started in 2017 to teach blogging to an Indian audience, filling a void as there
+                  were no creators teaching A to Z of blogging in Hindi.
+                </p>
+              </div>
+              <span class="yt-card-link-action">Visit Channel →</span>
+            </a>
+
+            <a class="yt-card" href="https://www.youtube.com/@BlogMafia" target="_blank" rel="noopener noreferrer">
+              <div>
+                <div class="yt-card-header">
+                  <div class="yt-icon-box"><svg width="22" height="22" aria-hidden="true">
+                      <use href="#icon-yt"></use>
+                    </svg></div>
+                  <span class="yt-subs-tag">NICHE SECRETS</span>
+                </div>
+                <h3 class="yt-card-title">@BlogMafia</h3>
+                <p class="yt-card-desc">Dedicated to blogging tutorials for beginners who need actionable, step-by-step
+                  tutorials rather than theoretical explanations.</p>
+              </div>
+              <span class="yt-card-link-action">Explore Channel →</span>
+            </a>
+
+            <a class="yt-card" href="https://www.youtube.com/@SEOMafia" target="_blank" rel="noopener noreferrer">
+              <div>
+                <div class="yt-card-header">
+                  <div class="yt-icon-box"><svg width="22" height="22" aria-hidden="true">
+                      <use href="#icon-yt"></use>
+                    </svg></div>
+                  <span class="yt-subs-tag">100 STUDENTS GOAL</span>
+                </div>
+                <h3 class="yt-card-title">@SEOMafia</h3>
+                <p class="yt-card-desc">An ambitious initiative to mentor at least 100 students to earn a sustainable
+                  living from blogging and gain financial freedom.
+                </p>
+              </div>
+              <span class="yt-card-link-action">Explore Channel →</span>
+            </a>
+
+
+
+            <div class="yt-card" style="border-style: dashed;">
+              <div>
+                <div class="yt-card-header">
+                  <div class="yt-icon-box"><svg width="22" height="22" aria-hidden="true">
+                      <use href="#icon-eye-off"></use>
+                    </svg></div>
+                  <span class="yt-subs-tag">MILLIONS REACH</span>
+                </div>
+                <h3 class="yt-card-title">Secret Faceless Network</h3>
+                <p class="yt-card-desc">Private fleet of automated, faceless video channels and social media pages
+                  generating millions of global views.</p>
+              </div>
+              <span class="yt-card-link-action" style="color: var(--text-dim);">Proprietary Fleet</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTOR 04: CODING & DEVELOPMENT SECTION (Deep Blue #2563eb)
+           ================================================================ -->
+      <section class="sector-slide theme-blue" id="coding" data-sector="3" data-color-primary="#2563eb"
+        data-color-secondary="#3b82f6">
+        <div class="sector-inner coding-layout">
+          <div class="section-header-block">
+            <div class="section-tag">
+              <span class="pulse-dot"></span>
+              <span>FULL-STACK ARCHITECTURE &amp; AI</span>
+            </div>
+            <h2 class="section-title">Full-Stack Code &amp; AI Engineering</h2>
+            <p class="section-subtitle">
+              Blogging was my proving ground, but code has always been my true engine. For over a decade, I built custom
+              web utilities, scrapers, and CMS platforms from scratch. In 2025, I immersed myself in AI and modern
+              developer tooling. Today, over 90% of my software and web infrastructure is engineered and maintained
+              entirely solo.
+            </p>
+          </div>
+
+          <!-- 2025 AI Deep Dive Feature Strip -->
+          <div class="ai-banner-strip">
+            <div>
+              <h3>The 2025 AI Immersion</h3>
+              <p>In 2025, I paused routine publishing for <strong>7 solid months to master Artificial
+                  Intelligence</strong>. I focused on practical engineering: deploying local LLMs, building autonomous
+                agent scripts, fine-tuning modern AI-driven SEO workflows (AIO), and orchestrating fast backend APIs.
+              </p>
+              <div class="ai-pills-row">
+                <span class="ai-pill">Local LLMs</span>
+                <span class="ai-pill">AI SEO (AIO)</span>
+                <span class="ai-pill">Autonomous Scripting</span>
+                <span class="ai-pill">Bulk Data Automation</span>
+                <span class="ai-pill">API Chaining</span>
+              </div>
+            </div>
+            <div class="solo-highlight-box">
+              <div class="solo-highlight-num">90%</div>
+              <div class="solo-highlight-title">Solo Coded &amp; Managed</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.25rem;">Zero outside agencies.
+                Total ownership.</div>
+            </div>
+          </div>
+
+          <!-- 4 Skill Category Matrix -->
+          <div class="skills-matrix-row">
+            <div class="skill-box">
+              <div class="skill-box-title"><svg width="18" height="18" aria-hidden="true">
+                  <use href="#icon-cube"></use>
+                </svg> Languages</div>
+              <div class="skill-tags-wrap">
+                <span class="skill-item">HTML</span>
+                <span class="skill-item">CSS</span>
+                <span class="skill-item">JavaScript</span>
+                <span class="skill-item">PHP</span>
+                <span class="skill-item">Python</span>
+                <span class="skill-item">Astro</span>
+                <span class="skill-item">Go</span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <div class="skill-box-title"><svg width="18" height="18" aria-hidden="true">
+                  <use href="#icon-cpu"></use>
+                </svg> Frameworks &amp; 3D</div>
+              <div class="skill-tags-wrap">
+                <span class="skill-item">React</span>
+                <span class="skill-item">Next JS</span>
+                <span class="skill-item">Node JS &amp; Express</span>
+                <span class="skill-item">Three.js / WebGL</span>
+                <span class="skill-item">Vite</span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <div class="skill-box-title"><svg width="18" height="18" aria-hidden="true">
+                  <use href="#icon-bolt"></use>
+                </svg> Databases</div>
+              <div class="skill-tags-wrap">
+                <span class="skill-item">MySQL</span>
+                <span class="skill-item">MariaDB</span>
+                <span class="skill-item">MongoDB</span>
+                <span class="skill-item">Redis</span>
+                <span class="skill-item">SQLite</span>
+                <span class="skill-item">DBA</span>
+                <span class="skill-item">REST API</span>
+              </div>
+            </div>
+
+            <div class="skill-box">
+              <div class="skill-box-title"><svg width="18" height="18" aria-hidden="true">
+                  <use href="#icon-cpu"></use>
+                </svg> Cloud &amp; AI</div>
+              <div class="skill-tags-wrap">
+                <span class="skill-item">Ubuntu</span>
+                <span class="skill-item">Nginx</span>
+                <span class="skill-item">Docker</span>
+                <span class="skill-item">Cloudflare</span>
+                <span class="skill-item">S3</span>
+                <span class="skill-item">Sysadmin</span>
+                <span class="skill-item">LLM & Prompt Eng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTOR 05: PERSONAL LIFE TIMELINE (Green #51ea58)
+           Interactive Cosmic Era Navigator
+           ================================================================ -->
+      <section class="sector-slide theme-green" id="timeline" data-sector="4" data-color-primary="#51ea58"
+        data-color-secondary="#10b981">
+        <div class="sector-inner">
+          <div class="section-header-block">
+            <div class="section-tag">
+              <span class="pulse-dot"></span>
+              <span>CHRONOLOGICAL BIOGRAPHY · 1996–2026</span>
+            </div>
+            <h2 class="section-title">The Personal &amp; Professional Journey</h2>
+            <p class="section-subtitle">
+              From losing our mud home in a rural Bengal flood to ranking 1st in school, erecting a bamboo antenna on
+              the rooftop, and achieving financial peace for my family.
+            </p>
+          </div>
+
+          <!-- 4 Era Navigation Pills -->
+          <div class="era-nav-bar">
+            <button class="era-tab-btn is-active" data-era="0" type="button">01. Roots &amp; Survival
+              (1996–2007)</button>
+            <button class="era-tab-btn" data-era="1" type="button">02. Discovery &amp; Fire (2012–2016)</button>
+            <button class="era-tab-btn" data-era="2" type="button">03. Breakthrough (2017–2020)</button>
+            <button class="era-tab-btn" data-era="3" type="button">04. Peak &amp; Peace (2022–2026+)</button>
+          </div>
+
+          <!-- Era Milestones Deck -->
+          <div class="era-milestones-deck" id="eraMilestonesDeck">
+            <!-- Populated dynamically by JS based on active era tab -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTOR 06: SOCIAL MEDIA SECTION (Gradient #ff006f - #b200ff)
+           Compact Single-Window Layout: Social Icon + Name Only
+           ================================================================ -->
+      <section class="sector-slide theme-gradient" id="socials" data-sector="5" data-color-primary="#ff006f"
+        data-color-secondary="#b200ff">
+        <div class="sector-inner">
+          <div class="section-header-block" style="margin-bottom: 2rem;">
+            <div class="section-tag">
+              <span class="pulse-dot"></span>
+              <span>DIRECT CONNECT</span>
+            </div>
+            <h2 class="section-title">Official Social Channels</h2>
+            <p class="section-subtitle">
+              Connect directly across official platforms, channels, and developer profiles.
+            </p>
+          </div>
+
+          <!-- Compact Minimalist Social Grid (8 Official Accounts Only) -->
+          <div class="compact-socials-grid">
+            <!-- 1. YouTube - RipoN -->
+            <a class="compact-social-card card-yt" href="https://www.youtube.com/@TechnicalRipoN" target="_blank"
+              rel="noopener noreferrer" data-magnetic aria-label="RipoN on YouTube">
+              <div class="compact-icon-wrap"><svg aria-hidden="true">
+                  <use href="#icon-yt"></use>
+                </svg></div>
+              <span class="compact-social-name">RipoN</span>
+            </a>
+
+            <!-- 2. YouTube - Blogging Mafia -->
+            <a class="compact-social-card card-yt" href="https://www.youtube.com/@BlogMafia" target="_blank"
+              rel="noopener noreferrer" data-magnetic aria-label="Blogging Mafia on YouTube">
+              <div class="compact-icon-wrap"><svg aria-hidden="true">
+                  <use href="#icon-yt"></use>
+                </svg></div>
+              <span class="compact-social-name">Blogging Mafia</span>
+            </a>
+
+            <!-- 3. YouTube - SEOMafia -->
+            <a class="compact-social-card card-yt" href="https://www.youtube.com/@SEOMafia" target="_blank"
+              rel="noopener noreferrer" data-magnetic aria-label="SEOMafia on YouTube">
+              <div class="compact-icon-wrap"><svg aria-hidden="true">
+                  <use href="#icon-yt"></use>
+                </svg></div>
+              <span class="compact-social-name">SEOMafia</span>
+            </a>
+
+            <!-- 4. Instagram - TechRipoN -->
+            <a class="compact-social-card card-insta" href="https://www.instagram.com/techripon/" target="_blank"
+              rel="noopener noreferrer" data-magnetic aria-label="TechRipoN on Instagram">
+              <div class="compact-icon-wrap"><svg aria-hidden="true">
+                  <use href="#icon-instagram"></use>
+                </svg></div>
+              <span class="compact-social-name">TechRipoN</span>
+            </a>
+
+            <!-- 5. Facebook - RipoN -->
+            <a class="compact-social-card card-fb" href="https://www.facebook.com/RPNClub" target="_blank"
+              rel="noopener noreferrer" data-magnetic aria-label="RipoN on Facebook">
+              <div class="compact-icon-wrap"><svg aria-hidden="true">
+                  <use href="#icon-facebook"></use>
+                </svg></div>
+              <span class="compact-social-name">RipoN</span>
+            </a>
+
+            <!-- 6. Twitter / X - TechRipoN -->
+            <a class="compact-social-card card-x" href="https://x.com/TechRipoN" target="_blank"
+              rel="noopener noreferrer" data-magnetic aria-label="TechRipoN on X">
+              <div class="compact-icon-wrap"><svg aria-hidden="true">
+                  <use href="#icon-twitter"></use>
+                </svg></div>
+              <span class="compact-social-name">TechRipoN</span>
+            </a>
+
+            <!-- 7. LinkedIn - TechRipoN -->
+            <a class="compact-social-card card-in" href="https://www.linkedin.com/in/theripon/" target="_blank"
+              rel="noopener noreferrer" data-magnetic aria-label="TechRipoN on LinkedIn">
+              <div class="compact-icon-wrap"><svg aria-hidden="true">
+                  <use href="#icon-linkedin"></use>
+                </svg></div>
+              <span class="compact-social-name">TechRipoN</span>
+            </a>
+
+            <!-- 8. GitHub - RipoN -->
+            <a class="compact-social-card card-git" href="https://github.com/RipoN4" target="_blank"
+              rel="noopener noreferrer" data-magnetic aria-label="RipoN on GitHub">
+              <div class="compact-icon-wrap"><svg aria-hidden="true">
+                  <use href="#icon-github"></use>
+                </svg></div>
+              <span class="compact-social-name">RipoN</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================================================================
+           SECTOR 07: PLANETARY LANDING FOOTER (Transparent Faded BG -> Solid Ground)
+           ================================================================ -->
+      <section class="sector-slide sector-landing theme-cyan" id="landing" data-sector="6" data-color-primary="#00f2fe"
+        data-color-secondary="#10b981">
+        <!-- Atmospheric Planetary Horizon Glow -->
+        <div class="planet-horizon-glow" aria-hidden="true"></div>
+
+        <!-- Curved Planetary Horizon Line -->
+        <svg class="planet-horizon-svg" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0,80 Q720,0 1440,80" fill="none" stroke="#00f2fe" stroke-width="2.5" opacity="0.8" />
+          <path d="M0,85 Q720,5 1440,85" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.4" />
+        </svg>
+
+        <!-- Planetary Surface Base Station -->
+        <div class="planet-surface-container">
+          <div class="touchdown-beacon">
+            <span class="pulse-beacon"></span>
+            <span>EXPEDITION COMPLETE</span>
+          </div>
+
+          <h2 class="landing-title">RipoN</h2>
+          <p class="landing-motto">IN IMAGINATION</p>
+
+          <div class="landing-telemetry-badge">
+            <span>Kolkata, India</span>
+          </div>
+
+          <ul class="landing-links">
+            <li><a href="#top" data-target-sector="0" data-magnetic>Home</a></li>
+            <li><a href="#blogging" data-target-sector="1" data-magnetic>Blogging</a></li>
+            <li><a href="#youtube" data-target-sector="2" data-magnetic>YouTube</a></li>
+            <li><a href="#coding" data-target-sector="3" data-magnetic>Coding &amp; AI</a></li>
+            <li><a href="#timeline" data-target-sector="4" data-magnetic>Personal Life</a></li>
+            <li><a href="#socials" data-target-sector="5" data-magnetic>Social Media</a></li>
+          </ul>
+
+          <button class="re-orbit-btn" data-target-sector="0" type="button">
+            <svg width="18" height="18" aria-hidden="true">
+              <use href="#icon-rocket"></use>
+            </svg>
+            <span>BACK TO ORBIT (TOP)</span>
+          </button>
+
+          <div class="landing-footline">
+            © 2014–2026 RipoN Sahaji.
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

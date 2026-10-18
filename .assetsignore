@@ -1,0 +1,8 @@
+data.txt
+.vscode
+.git
+.gitignore
+*.md
+wrangler.toml
+package.json
+node_modules
